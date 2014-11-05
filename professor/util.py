@@ -145,7 +145,7 @@ def connect_to(database):
         slaveok=True,
     )
     conndb = conn[database['dbname']]
-    if database.get('username', None) && database.get('password', None):
+    if database.get('username', None) and database.get('password', None):
         conndb.authenticate(database['username'], database['password'])
     return conndb
 
